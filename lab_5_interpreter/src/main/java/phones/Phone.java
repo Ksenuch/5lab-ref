@@ -22,7 +22,7 @@ public class Phone {
     public int getMemorySize() { return memorySize; }
     public String getModel() { return model; }
     public double getPrice() { return price; }
-    
+
     //method members
     public void draw(){
         //draw Phone picture
@@ -32,14 +32,14 @@ public class Phone {
     }
     public void delivery(){
         //issue delivery
-    }   
+    }
     @Override
     public String toString() {
         StringBuilder sb=new StringBuilder(model);
         sb.append(" size=");
         sb.append(screenSize);
         sb.append("inch price=");
-        sb.append(price); 
+        sb.append(price);
         //Сервис-Параметры-Разное-поле Шрифт-выбрать Segoe UI
         sb.append('\u20bd');
         sb.append(color.toString()).append(" ").append(memorySize).append("Гб");
