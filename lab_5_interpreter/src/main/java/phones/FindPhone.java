@@ -44,4 +44,20 @@ public class FindPhone {
                 new NotTag(new ColorTag(col))
         ));
     }
+    public List<Phone> byModelAndPriceLowerAndColor(String mod, double price, Color color)
+    {
+        List<Phone> find=new LinkedList<>();
+
+        for(Phone ph : data)
+        {
+            var model = new ModelTag(mod);
+            var priceLow = new PriceLowerTag(price);
+            var colorTag = new ColorTag(color);
+
+            if(model.find(ph) && priceLow.find(ph) && !colorTag.find(ph))
+                find.add(ph);
+        }
+
+        return find;
+    }
 }
